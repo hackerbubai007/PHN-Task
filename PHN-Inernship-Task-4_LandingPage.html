@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipankar Community Website</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #141010;
+}
+
+header {
+  background-color: #8c9a5b;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  margin-right: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fb1010;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 30px;
+  background: linear-gradient(235deg,#89ff00,#a5abbf,#00bcd4);
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content-card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+.content-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.content-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.content-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.content-card a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #738b53;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.content-card a:hover {
+  background-color: #f31a1a;
+}
+
+.update-card {
+  background-color: #356f77;
+  padding: 20px;
+}
+
+.update-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.update-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.update-card a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.update-card a:hover {
+  background-color: #f51b1b;
+}
+
+.events {
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+.event-card {
+  margin-bottom: 20px;
+}
+
+.event-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.event-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.event-card .date {
+  font-weight: bold;
+}
+
+.event-card .location {
+  font-style: italic;
+}
+
+.event-card a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #5b8049;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.event-card a:hover {
+  background-color: #ed0505;
+}
+
+footer {
+  background-color: #f2f2f2;
+padding: 20px;
+text-align: center;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+}
+
+nav li {
+margin-bottom: 10px;
+}
+
+.banner h1 {
+font-size: 28px;
+}
+
+.banner p {
+font-size: 16px;
+}
+
+.content-card,
+.update-card,
+.event-card {
+padding: 10px;
+}
+}
+
+@media (max-width: 480px) {
+.content-card h3 {
+font-size: 16px;
+}
+
+.content-card p {
+font-size: 12px;
+}
+
+.update-card h3 {
+font-size: 16px;
+}
+
+.update-card p {
+font-size: 12px;
+}
+
+.event-card h3 {
+font-size: 16px;
+}
+
+.event-card p {
+font-size: 12px;
+}
+
+.event-card .date,
+.event-card .location {
+font-size: 12px;
+}
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Featured</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <h1>Welcome to our Community</h1>
+      <p>Join us to connect, learn, and grow together!</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="featured">
+      <h2>Featured Content</h2>
+      <div class="content-card">
+        <img src="https://reputationtoday.in/wp-content/uploads/2020/04/4d8dd-students-in-community.001.png" alt="Featured Content 1">
+        <h3>Featured Article</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content-card">
+        <img src="https://thumbs.dreamstime.com/b/diverse-people-circle-community-concept-43888196.jpg" alt="Featured Content 2">
+        <h3>Featured Video</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">Watch Now</a>
+      </div>
+    </section>
+
+    <section class="updates">
+      <h2>Recent Updates</h2>
+      <div class="update-card">
+        <h3>Update Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id risus in dolor consectetur fermentum.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="update-card">
+        <h3>Update Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id risus in dolor consectetur fermentum.</p>
+        <a href="#">Read More</a>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <h3>Event Title</h3>
+        <p>Date: <span class="date">May 25, 2023</span></p>
+        <p>Location: <span class="location">D.M Community Center</span></p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="event-card">
+        <h3>Event Title</h3>
+        <p>Date: <span class="date">June 1, 2023</span></p>
+        <p>Location: <span class="location">D.M Community Center</span></p>
+        <a href="#">Learn More</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Community Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
