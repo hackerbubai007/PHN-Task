@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>D & M Care</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom css -->
+
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
+:root{
+    --clr-blue: #316716;
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-gray: #7d7987;
+    --clr-dark-blue: #233348;
+    --clr-dark-purple: #1f1534;
+    --font-family-mulish: 'Mulish', sans-serif;
+    --transition-default: all 300ms ease-in-out;
+}
+
+html{
+    scroll-behavior: smooth;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* some resets & configuration */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: unset;
+    transition: var(--transition-default);
+}
+
+a:focus, a:hover{
+    color: unset;
+}
+
+img, picture, video, canvas, svg{
+    max-width: 100%;
+    display: block;
+}
+input, button, textarea, select{
+    font: inherit;
+    outline: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+textarea{
+    resize: none;
+}
+img, object, embed, video{
+    max-width: 100%;
+}
+
+body{
+    font-family: var(--font-family-mulish);
+    line-height: 1.6;
+    height: 100%;
+    font-weight: 300;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.page-wrapper{
+    overflow: hidden!important;
+}
+
+/* header section  & navbar */
+.header{
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--clr-blue);
+}
+.header *{
+    color: var(--clr-white);
+}
+.navbar{
+    padding: 56px 0 80px 0;
+}
+.brand-and-toggler{
+    width: 100%;
+}
+.navbar-content{
+    height: 41px;
+}
+.navbar-brand .brand-shape{
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 12px;
+    color: var(--clr-blue);
+}
+
+.navbar-brand .brand-text{
+    color: var(--clr-white);
+    font-size: 24px;
+}
+.nav-item{
+    margin-left: 40px;
+}
+.nav-link{
+    font-weight: 400;
+    font-size: 18px;
+}
+.nav-link:hover{
+    opacity: 0.9;
+}
+.nav-link.nav-active{
+    position: relative;
+    color: var(--clr-white);
+    font-weight: 700;
+    opacity: 1;
+}
+.nav-link.nav-active::after{
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-white);
+}
+.navbar-show-btn{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar-hide-btn{
+    display: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+.navbar-hide-btn:hover{
+    opacity: 0.8;
+}
+.element-one{
+    position: absolute;
+    top: calc(56px + 41px + 63px);
+    left: 0;
+}
+.element-one img{
+    width: 60px;
+}
+
+/* banner */
+.banner-title{
+    font-size: 48px;
+    line-height: 1.166;
+}
+.banner-content{
+    display: grid;
+    column-gap: 78px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.banner-left .content-wrapper{
+    max-width: 445px;
+    margin-left: auto;
+}
+.banner-left .content-wrapper p{
+    max-width: 340px;
+}
+.banner-left .text{
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+/* services */
+.sc-services{
+    padding-top: 179px;
+    padding-bottom: 115.9px;
+    position: relative;
+    overflow: hidden;
+}
+.sc-services .content-wrapper{
+    max-width: 670px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.sc-services .content-wrapper .text{
+    line-height: 1.6667;
+}
+.services-list{
+    margin-top: calc(83px - 18.5px);
+    margin-bottom: -18.5px;
+    margin-right: -18.5px;
+    margin-left: -18.5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.services-item{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    width: 350px;
+    min-height: 354px;
+    padding: 46px 38px;
+    margin: 18.5px;
+    width: calc(33.3333% - 37px);
+    transition: var(--transition-default);
+}
+.services-item:hover{
+    box-shadow:  rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+}
+.services-item .item-title{
+    font-size: 24px;
+    margin-top: 22px;
+    margin-bottom: 12px;
+}
+.services-shape{
+    position: absolute;
+    z-index: -1;
+    top: 290px;
+    left: -70px;
+}
+.services-main-btn{
+    margin-top: 69px;
+}
+
+/* grid block one */
+.grid-content .content-wrapper{
+    max-width: 360px;
+}
+.grid-content{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 137px;
+}
+.grid-content .title-box .title-separator{
+    margin-left: 0;
+    margin-top: 26px;
+}
+.grid-content .text{
+    line-height: 1.667;
+}
+.grid-content .btn{
+    margin-top: 37px;
+}
+
+/* grid one */
+.sc-grid-one{
+    padding: 115.5px 0 114.5px 0;
+    background-color: var(--clr-blue);
+}
+.sc-grid-one .grid-content .title-box .title-separator{
+    background-color: var(--clr-white);
+}
+
+/* grid two */
+.sc-grid-two{
+    padding: 114.5px 0 125px 0;
+}
+.sc-grid-two .grid-content .grid-img{
+    order: 2;
+}
+.sc-grid-two .grid-content .grid-text .content-wrapper{
+    max-width: 340px;
+}
+.sc-grid-two .btn:hover img{
+    filter: invert(100%) brightness(100);
+}
+.sc-grid-two .grid-content .grid-text{
+    margin-left: auto;
+}
+.sc-grid-two .btn img{
+    margin-left: 7px;
+}
+
+/* feedback section */
+.sc-feedback{
+    padding: 125px 0 138px 0;
+}
+.feedback-content{
+    max-width: 1120px;
+    background: linear-gradient(208.18deg, #47631b 9.05%, #506f16 76.74%);
+    border-radius: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 425px;
+    position: relative;
+}
+.feedback-content .title-box{
+    padding-top: 61px;
+}
+.feedback-content .title-box .title-separator{
+    background-color: var(--clr-white);
+}
+.feedback-content .feedback-element{
+    position: absolute;
+    right: -50px;
+    top: -15px;
+    z-index: 1;
+}
+.feedback-content .feedback-element-2{
+    position: absolute;
+    bottom: 50px;
+    left: -52px;
+    z-index: -1;
+}
+.feedback-item .item-left .item-info{
+    margin-left: 29px;
+}
+.feedback-item{
+    padding: 66px 124px 86px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 111px;
+}
+.feedback-item .item-img{
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--clr-white);
+}
+.feedback-item .item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50%;
+}
+.feedback-item .item-info .name{
+    font-size: 22px;
+}
+.feedback-item .item-info .designation{
+    font-size: 18px;
+}
+.feedback-item .item-right{
+    max-width: 340px;
+    line-height: 1.57;
+}
+.feedback-list{
+    position: relative;
+}
+.feedback-list .owl-dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 40px);
+}
+.feedback-list .owl-dots .owl-dot span{
+    background-color: var(--clr-blue)!important;
+    opacity: 0.3;
+}
+.feedback-list .owl-dots .owl-dot:hover span{
+    background-color: var(--clr-blue)!important;
+    opacity: 1;
+}
+.feedback-list .owl-dots .owl-dot.active span{
+    opacity: 1;
+}
+.feedback-list .owl-nav{
+    position: absolute;
+    top: calc(100% + 24px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feedback-list .owl-nav button:hover{
+    background-color:transparent!important;
+    color: var(--clr-blue)!important;
+}
+.feedback-list .owl-nav .owl-prev{
+    margin-right: 286px;
+}
+.feedback-list .owl-nav{
+    color: var(--clr-blue);
+    opacity: 1;
+}
+.feedback-list .owl-nav .disabled{
+    opacity: 0.3;
+}
+
+/* articles */
+.sc-articles{
+    position: relative;
+    padding: 108px 0 64.5px 0;
+}
+.articles-item{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    border-radius: 20px;
+    background-color: var(--clr-white);
+    max-width: 350px;
+}
+.articles-list{
+    margin-right: -17px;
+    margin-left: -17px;
+    margin-top: 79px;
+}
+.articles-shape{
+    position: absolute;
+    right: 0;
+    top: 200px;
+    z-index: -1;
+}
+.articles-item{
+    width: calc(33.3333% - 34px);
+    overflow: hidden;
+    margin: 0 17px;
+    transition: var(--transition-default);
+}
+.articles-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.articles-item .item-img{
+    height: 246px;
+    overflow: hidden;
+}
+.articles-item .item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.articles-item .item-body{
+    padding: 24px 33px 35px;
+}
+.articles-item .item-title{
+    font-weight: 700;
+    line-height: 1.52;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+.articles-item .text{
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.articles-item .item-link-text{
+    font-weight: 600;
+    font-size: 17px;
+}
+.articles-item .item-link-icon{
+    margin-left: 12px;
+}
+.articles-item .item-link:hover{
+    color: #30430f;
+}
+.articles-content{
+    position: relative;
+}
+.articles-element{
+    position: absolute;
+    top: 105px;
+    left: -5px;
+    z-index: -1;
+}
+
+/* footer */
+.footer{
+    margin-top: 136.6px;
+    background: linear-gradient(183.41deg, #4a771b -8.57%, #2a6616 82.96%);
+    padding-top: 118px;
+    padding-bottom: 109px;
+    position: relative;
+}
+
+.footer .navbar-brand{
+    margin-bottom: 17px;
+}
+
+.footer .navbar-brand .brand-shape{
+    background-color: var(--clr-white);
+    color: var(--clr-blue);
+}
+.footer .navbar-brand .brand-text{
+    color: var(--clr-white);
+}
+
+.footer-list{
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 40px;
+}
+.footer-item:nth-child(1){
+    padding-right: 100px;
+}
+.footer-item:nth-child(1) p{
+    font-weight: 300;
+    font-size: 18px;
+}
+.footer-item:nth-child(1) .copyright-text{
+    margin-top: 31px;
+    line-height: 1.55;
+}
+.footer-item-title{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+.footer-links li a{
+    font-weight: 300;
+    font-size: 18px;
+}
+.footer-links li a:hover{
+    opacity: 0.95;
+    text-decoration: underline;
+}
+.footer-links li{
+    margin-bottom: 10px;
+}
+.footer-element-1{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.footer-element-2{
+    position: absolute;
+    right: 91px;
+    top: -70px;
+    z-index: 1;
+}
+
+/* Media queries */
+@media screen and (max-width: 1120px){
+    .feedback-list .feedback-item{
+        column-gap: 40px;
+    }
+
+    .footer-item:nth-child(1){
+        padding-right: 0;
+    }
+
+    .footer-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar .navbar-show-btn{
+        display: block;
+    }
+
+    .navbar .navbar-hide-btn i{
+        color: var(--clr-black);
+    }
+
+    .navbar-box{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 280px;
+        height: 100%;
+        box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+        z-index: 999;
+        background-color: var(--clr-white);
+        padding: 48px 32px 24px;
+        transform: translateX(100%);
+        transition: var(--transition-default);
+    }
+
+    .navbar-box-show{
+        transform: translateX(0);
+    }
+
+    .navbar-box .nav-link{
+        color: var(--clr-black);
+        position: relative;
+        padding-bottom: 8px;
+    }
+
+    .navbar-box .nav-link::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 0;
+        background-color: var(--clr-blue);
+        transition: var(--transition-default);
+    }
+    .navbar-box .nav-link:hover{
+        color: var(--clr-blue);
+    }
+    .navbar-box .nav-link:hover::after{
+        width: 100%;
+    }
+    .navbar-box .nav-link.nav-active{
+        color: var(--clr-blue);
+    }
+    .navbar-box .nav-item{
+        margin: 12px 0;
+    }
+    .navbar-box .navbar-nav{
+        flex-direction: column;
+    }
+    .navbar-box .navbar-hide-btn{
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        font-size: 24px;
+    }
+
+    /* banner */
+    .banner-content{
+        column-gap: 36px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner .banner-left .content-wrapper{
+        max-width: 540px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+    .banner-left .content-wrapper p{
+        max-width: 100%;
+    }
+    .banner .banner-right{
+        justify-content: center;
+        margin-top: 40px;
+        max-width: 480px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* services */
+    .sc-services{
+        padding-top: 80px!important;
+        padding-bottom: 80px!important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .services-item{
+        width: calc(50% - 37px);
+    }
+
+    .sc-services{
+        padding-top: 120px;
+        padding-bottom: 115.5px;
+    }
+    .services-shape{
+        width: 70%;
+        top: 340px;
+    }
+
+    /* grid one */
+    .sc-grid-one, .sc-grid-two{
+        padding: 100px 0;
+    }
+
+    .grid-content .content-wrapper{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .grid-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-content .title-box .title-separator{
+        margin-left: auto;
+    }
+    .grid-content .grid-img{
+        max-width: 480px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+    }
+
+    .sc-grid.sc-grid-two .grid-content .content-wrapper{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .sc-grid-two .grid-content .grid-text{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+
+    /* feedback */
+    .sc-feedback{
+        padding: 120px;
+    }
+    .feedback-list .feedback-item{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 32px;
+    }
+    .feedback-list .feedback-item .item-right{
+        max-width: 100%;
+        margin-top: 24px;
+    }
+    .feedback-list .owl-nav .owl-prev{
+        margin-right: 200px;
+    }
+    .feedback-content .feedback-element{
+        width: 40px;
+        right: 5px;
+        top: 5px;
+    }
+    .feedback-content .feedback-element-2{
+        width: 50px;
+        left: 0;
+    }
+
+    /* articles */
+    .sc-articles{
+        padding: 100px 0;
+    }
+    .articles-content .articles-item{
+        width: calc(50% - 34px);
+        overflow: hidden;
+        margin: 17px;
+    }
+    .articles-shape{
+        width: 50%;
+    }
+    .articles-element{
+        top: 180px;
+        width: 60px;
+    }
+
+    /* footer */
+    .footer-element-1{
+        width: 60px;
+    }
+    .footer-element-22{
+        width: 60px;
+        right: 0;
+        top: -35px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* navbar */
+    .element-one img{
+        width: 40px;
+    }
+    /* grid one */
+    .sc-grid-one, .sc-grid-two{
+        padding: 80px 0;
+    }
+
+    /* feedback */
+    .sc-feedback{
+        padding: 80px 0;
+    }
+    .feedback-list .feedback-item{
+        padding-right: 20px;
+        padding-left: 20px
+    }
+    .feedback-list .feedback-item .item-left{
+        flex-direction: column;
+    }
+    .feedback-list .feedback-item .item-left .item-info{
+        margin-left: 0;
+        text-align: center;
+        margin-top: 16px;
+    }
+    .feedback-list .owl-nav .owl-prev{
+        margin-right: 120px;
+    }
+
+    /* articles */
+    .sc-articles{
+        padding: 80px 0;
+    }
+
+    /* footer */
+    .footer-list{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .footer-list .navbar-brand{
+        justify-content: center;
+    }
+    .footer-list .footer-item:nth-child(1){
+        max-width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 678px){
+    .sc-services .services-list{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .services-list .services-item{
+        width: 100%;
+        margin: 12px 0;
+    }
+
+    .articles-list .articles-item{
+        width: calc(100% - 34px);
+        overflow: hidden;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .services-item{
+        text-align: center;
+    }
+    .services-item .item-icon img{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .navbar-box{
+        width: 100%;
+    }
+}
+   </style>
+   <style>
+    /* utilities classes */
+.container{
+    margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    max-width: calc(1273px - 32px);
+}
+
+/* text stylings and colors */
+.text{
+    color: var(--clr-gray);
+    mix-blend-mode: normal;
+    font-weight: 300;
+    font-style: normal;
+}
+.text-blue{color: var(--clr-blue);}
+.text-black{color: var(--clr-black);}
+.text-white{color: var(--clr-white);}
+.text-gray{color: var(--clr-gray);}
+.text-dark-purple{color: var(--clr-dark-purple);}
+
+.text-uppercase{text-transform: uppercase;}
+.text-capitalize{text-transform: capitalize;}
+.text-lowercase{text-transform: lowercase;}
+.text-center{text-align: center;}
+.text-start{text-align: left;}
+.text-end{text-align: right;}
+.text-justify{text-align: justify;}
+.text-nowrap{white-space: nowrap;}
+
+/* backgrounds colors */
+.bg-transparent{background-color: transparent;}
+.bg-white{background-color: var(--clr-white);}
+.bg-black{background-color: var(--clr-black);}
+.bg-blue{background-color: var(--clr-blue);}
+.bg-gray{background-color: var(--clr-gray);}
+.bg-dark-purple{background-color: var(--clr-dark-purple);}
+
+.op-01{opacity: 0.1;}
+.op-02{opacity: 0.2;}
+.op-03{opacity: 0.3;}
+.op-04{opacity: 0.4;}
+.op-05{opacity: 0.5;}
+.op-06{opacity: 0.6;}
+.op-07{opacity: 0.7;}
+.op-08{opacity: 0.8;}
+.op-09{opacity: 0.9;}
+
+/* font weights */
+.fw-3{font-weight: 300;}
+.fw-4{font-weight: 400;}
+.fw-5{font-weight: 500;}
+.fw-6{font-weight: 600;}
+.fw-7{font-weight: 700;}
+.fw-8{font-weight: 800;}
+.fw-9{font-weight: 900;}
+
+/* display */
+.d-block{display: block;}
+.d-inline{display: inline;}
+.d-inline-block{display: inline-block;}
+.d-flex{display: flex;}
+.d-inline-flex{display: inline-flex;}
+.d-grid{display: grid;}
+.d-none{display: none;}
+
+/* flex */
+.justify-content-start{justify-content: flex-start;}
+.justify-content-end{justify-content: flex-end;}
+.justify-content-center{justify-content: center;}
+.align-items-center{align-items: center;}
+.align-items-stretch{align-items: stretch;}
+.align-items-end{align-items: flex-start;}
+.align-items-start{align-items: flex-start;}
+.align-items-baseline{align-items: baseline;}
+.flex-column{flex-direction: column;}
+.flex-row{flex-direction: row;}
+.flex-wrap{flex-wrap: wrap;}
+
+/* vertically and horizontally centered */
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.justify-content-between{justify-content: space-between;}
+
+/* buttons */
+.btn{
+    min-width: 200px;
+    height: 56px;
+    border-radius: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--clr-white);
+    transition: var(--transition-default);
+}
+
+.btn:hover{
+    color: var(--clr-white);
+    background-color: #1472f4;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.btn-primary{
+    background-color: var(--clr-blue);
+}
+.btn-primary-outline{
+    border: 1.4px solid var(--clr-blue);
+    color: var(--clr-blue);
+}
+.btn-secondary{
+    background-color: var(--clr-white);
+    color: var(--clr-blue);
+}
+.btn-white-outline{
+    color: var(--clr-white);
+    border: 1.4px solid var(--clr-white);
+}
+.btn-white-outline:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-blue);
+}
+
+/* title */
+.title-box .title-box-name{
+    font-weight: 700;
+    font-size: 36px;
+}
+.title-box .title-separator{
+    height: 2px;
+    background-color: var(--clr-black);
+    width: 56px;
+    margin-top: 10px;
+    margin-bottom: 33px;
+}
+
+/* margin auto */
+.mx-auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 992px){
+    .title-box .title-box-name{
+        font-size: 32px;
+    }
+}
+
+.resize-animation-stopper *{
+    animation: none!important;
+    transition: none!important;
+}
+   </style>
+    <!-- normalize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- header -->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container">
+            <div
+              class="navbar-content d-flex justify-content-between align-items-center"
+            >
+              <div
+                class="brand-and-toggler d-flex align-items-center justify-content-between"
+              >
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                  <span class="brand-shape d-inline-block text-white">D</span>
+                  <span class="brand-text fw-7">D&M Care</span>
+                </a>
+                <button type="button" class="d-none navbar-show-btn">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+
+              <div class="navbar-box">
+                <button type="button" class="navbar-hide-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+
+                <ul class="navbar-nav d-flex align-items-center">
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link text-white nav-active text-nowrap"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#services" class="nav-link text-white text-nowrap"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#departments"
+                      class="nav-link text-white text-nowrap"
+                      >Departments</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#doctors" class="nav-link text-white text-nowrap"
+                      >Your doctor</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#app" class="nav-link text-white text-nowrap"
+                      >Apps</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#test" class="nav-link text-white text-nowrap"
+                      >Testimonials</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#aboutus" class="nav-link text-white text-nowrap"
+                      >About us</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#Contactus" class="nav-link text-white text-nowrap"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div id="about" class="element-one">
+          <img
+            src=""
+            alt=""
+          />
+        </div>
+
+        <div class="banner">
+          <div class="container">
+            <div class="banner-content">
+              <div class="banner-left">
+                <div class="content-wrapper">
+                  <h1 class="banner-title">
+                    Virtual healthcare <br />
+                    for you
+                  </h1>
+                  <p class="text text-white">
+                    Raushan Care provides progressive, and affordable
+                    healthcare, accessible on mobile and onnline for everyone
+                  </p>
+                  <a href="#" class="btn btn-secondary">Consult today</a>
+                </div>
+              </div>
+
+              <div
+                class="banner-right d-flex align-items-center justify-content-end"
+              >
+                <img
+                  src="https://cdn.systematic.com/media/g0sj1tbg/hospital-building-001-global.jpg?cropAlias=hero_large&width=992&height=483&quality=80&rmode=crop&format=webp&null"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+
+      <main>
+        <section id="services" class="sc-services">
+          <div class="services-shape">
+            <img
+              src="https://img.money.com/2022/07/Best-2022-Hospitals-Tips-To-Be-Prepared2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="container">
+            <div class="services-content">
+              <div class="title-box text-center">
+                <div class="content-wrapper">
+                  <h3 class="title-box-name">Our Services</h3>
+                  <div class="title-separator mx-auto"></div>
+                  <p class="text title-box-text">
+                    We provide you the best choices for you. Adjust it to your
+                    health needs and make sure you undergo treatment with our
+                    highly qualified doctors you can consult with us which type
+                    of service is suitable for your health
+                  </p>
+                </div>
+              </div>
+
+              <div class="services-list">
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsc3ncq13snYzm7q26D7omz7Ks8yXGSdhAFA&usqp=CAU"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Search doctor</h5>
+                  <p class="text">
+                    Choose your doctor form thousands of specialist, general and
+                    trusted hospitals.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://media.istockphoto.com/id/1096306446/photo/pharmacist-holding-computer-tablet-in-pharmacy-drugstore.jpg?s=612x612&w=0&k=20&c=cRRXhv_qdNiHu6BCdSomsYIKOuhqrhIA2EWgbOWA2vk="
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Online pharmacy</h5>
+                  <p class="text">
+                    Buy your medicines with our mobile application with a simple
+                    delivery system
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://previews.123rf.com/images/stylephotographs/stylephotographs1706/stylephotographs170600338/80506338-doctors-welcome-patient-to-consultation-at-hospital.jpg"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Consultation</h5>
+                  <p class="text">
+                    Free consultation with our trusted doctors and get the best
+                    recommendations.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://media.istockphoto.com/id/1364075546/photo/empty-corridor-in-modern-hospital-with-information-counter-and-hospital-bed-in-rooms-3d.jpg?s=612x612&w=0&k=20&c=xxFDmIVpH1wJaaiorpvfzec4RRggSb48PDb_dU9bTjo="
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Details info</h5>
+                  <p class="text">
+                    Free consultation with our trusted doctors and get the best
+                    recommendations.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://cdn.apollohospitals.com/dev-apollohospitals/2020/09/emergency.png"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Emergency care</h5>
+                  <p class="text">
+                    You can get 24/7 urgent care for yourself or your children
+                    and your lovely family.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://d37oebn0w9ir6a.cloudfront.net/account_26431/shutterstock_1197119827_2000_b8caba272d0cd325b300b95a62535e36.jpg"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Tracking</h5>
+                  <p class="text">
+                    Track and save your mental history and health data
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-center services-main-btn"
+              >
+                <button type="button" class="btn btn-primary-outline">
+                  View more
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="departments" class="sc-services">
+          <div class="services-shape">
+            <img
+              src="https://github.com/Raushan2704/PHN_Internship_Task6/blob/main/Assets/images/curve-shape-1.png?raw=true"
+              alt=""
+            />
+          </div>
+          <div class="container">
+            <div class="services-content">
+              <div class="title-box text-center">
+                <div class="content-wrapper">
+                  <h3 class="title-box-name">Our Departments</h3>
+                  <div class="title-separator mx-auto"></div>
+                  <p class="text title-box-text">
+                    We provide you the various Departments for you. Adjust it to
+                    your health needs and make sure you undergo treatment with
+                    our highly qualified doctors you can consult with us which
+                    type of service is suitable for your health
+                  </p>
+                </div>
+              </div>
+
+              <div class="services-list">
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkbdZEXOcMzpYq6VCguZNf4Ud89RsTNkGRw&usqp=CAU"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Surgery</h5>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://content3.jdmagicbox.com/comp/def_content/eye_hospitals/default-eye-hospitals-0.jpg?clr=2c2c3a"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">EYE</h5>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrqz9mYx6HTTs9VJW--JWqc_5EnQyZvjSLYA&usqp=CAU"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">ENT</h5>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBTX4CoWTnrRq3VI65zorFFeKvAcfUq18ChA&usqp=CAU"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dermatology</h5>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByqBa_VsZaeb6hKS0vk01tuAyrxkmscM2Jg&usqp=CAU"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Cardiology</h5>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS1yqnpa09YkKcdBdGifL8fUpqNzGqYwfDDA&usqp=CAU"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dental</h5>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-center services-main-btn"
+              >
+                <button type="button" class="btn btn-primary-outline">
+                  View more
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="doctors" class="sc-services">
+          <div class="services-shape">
+            <img src="assets/images/curve-shape-1.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="services-content">
+              <div class="title-box text-center">
+                <div class="content-wrapper">
+                  <h3 class="title-box-name">Our DOCTORS</h3>
+                  <div class="title-separator mx-auto"></div>
+                  <p class="text title-box-text">
+                    We provide you the best doctors for you. Adjust it to your
+                    health needs and make sure you undergo treatment with our
+                    highly qualified doctors you can consult with us which type
+                    of service is suitable for your health
+                  </p>
+                </div>
+              </div>
+
+              <div class="services-list">
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8eVwS8hQvFpLG9d7ZrHFEZtqMf8dnycQVlzOEz304-g&s"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Surgeon Dr. Sunil M Nadkarni</h5>
+                  <p class="text">Surgery specialist</p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7gDB0kX7thS5pOypWG2h5XWvlp_jUtNxOEsnDYb4&s"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dr. Rahil Chaudhary</h5>
+                  <p class="text">EYE specialist</p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKji3c9C6i6hWT4YyoQPwYHDQWlMHJVSPZmes7T9AObA&s"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dr. Atul Kumar Mittal</h5>
+                  <p class="text">ENT specialist</p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://images.jdmagicbox.com/comp/midnapore/a2/9999p3222.3222.180226204857.e1a2/catalogue/dr-s-r-jana-tamluk-midnapore-cardiologists-hyp1c1y4vg.jpg"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dr. P K Dantopat</h5>
+                  <p class="text">Heart specialist</p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src=""
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dr.sukdev Mal</h5>
+                  <p class="text">Skin specialist</p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img
+                      src="https://static.medmonks.com/home/img/doctors/1545218495.jpeg"
+                      alt="service icon"
+                    />
+                  </div>
+                  <h5 class="item-title fw-7">Dr. Aman Popli</h5>
+                  <p class="text">Dental specialist</p>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-center services-main-btn"
+              >
+                <button type="button" class="btn btn-primary-outline">
+                  View more
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sc-grid sc-grid-one">
+          <div class="container">
+            <div class="grid-content d-grid align-items-center">
+              <div class="grid-img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSII79Qv0WS7dFremGbzDMC131rXvl349KWgA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="grid-text">
+                <div class="content-wrapper text-start">
+                  <div class="title-box">
+                    <h3 class="title-box-name text-white">
+                      Leading healthcare providers
+                    </h3>
+                    <div class="title-separator mx-auto"></div>
+                  </div>
+
+                  <p class="text title-box-text text-white">
+                    Raushan Care provides progressive, and affordable
+                    healthcare, accessible on mobile and online for everyone. To
+                    us, it's not just work. We take pride in the solutions we
+                    deliver
+                  </p>
+                  <button type="button" class="btn btn-white-outline">
+                    Learn more
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="app" class="sc-grid sc-grid-two">
+          <div class="container">
+            <div class="grid-content d-grid align-items-center">
+              <div class="grid-img">
+                <img
+                  src="https://www.mobindustry.net/wp-content/uploads/telemedicine.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="grid-text">
+                <div class="content-wrapper text-start">
+                  <div class="title-box">
+                    <h3 class="title-box-name">Download our mobile apps</h3>
+                    <div class="title-separator mx-auto"></div>
+                  </div>
+                  <p class="text title-box-text">
+                    Our dedicated patient engagement app and web portal allow
+                    you to access information instantaneously (no tedeous form,
+                    long calls, or administrative hassle) and securely
+                  </p>
+                  <button type="button" class="btn btn-primary-outline">
+                    Download
+                    <img
+                      src=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="test" class="sc-feedback">
+          <div class="container">
+            <div class="feedback-content">
+              <div class="feedback-element">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt4fq4gIW1IgAn6IeEnxMrmGVUbeL3N0M6bA&usqp=CAU"
+                />
+              </div>
+              <div class="feedback-element-2">
+                <img
+                  src=""
+                />
+              </div>
+              <div class="title-box text-center">
+                <div class="content-wrapper">
+                  <h3 class="title-box-name text-white">
+                    What our customer are saying
+                  </h3>
+                  <div class="title-separator mx-auto"></div>
+                </div>
+              </div>
+
+              <div class="feedback-list feedback-slider owl-carousel owl-theme">
+                <div class="feedback-item d-grid">
+                  <div class="item-left d-flex align-items-center">
+                    <div class="item-img">
+                      <img
+                        src=""
+                        alt=""
+                      />
+                    </div>
+                    <div class="item-info text-white">
+                      <p class="fw-7 name">Edward Newgate</p>
+                      <span class="designation fw-4">Founder Circle</span>
+                    </div>
+                  </div>
+                  <div class="item-right">
+                    <p class="text text-white">
+                      "Our dedicated patient engagement app and web portal allow
+                      you to access information instantaneoulsy (no tedeous
+                      form, long calls, or administrative hassle) and securely"
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feedback-item d-grid">
+                  <div class="item-left d-flex align-items-center">
+                    <div class="item-img">
+                      <img
+                        src=""
+                        alt=""
+                      />
+                    </div>
+                    <div class="item-info text-white">
+                      <p class="fw-7 name">Edward Newgate</p>
+                      <span class="designation fw-4">Founder Circle</span>
+                    </div>
+                  </div>
+                  <div class="item-right">
+                    <p class="text text-white">
+                      "Our dedicated patient engagement app and web portal allow
+                      you to access information instantaneoulsy (no tedeous
+                      form, long calls, or administrative hassle) and securely"
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feedback-item d-grid">
+                  <div class="item-left d-flex align-items-center">
+                    <div class="item-img">
+                      <img
+                        src=""
+                        alt=""
+                      />
+                    </div>
+                    <div class="item-info text-white">
+                      <p class="fw-7 name">Simon Paul</p>
+                      <span class="designation fw-4">Founder Circle</span>
+                    </div>
+                  </div>
+                  <div class="item-right">
+                    <p class="text text-white">
+                      "Our dedicated patient engagement app and web portal allow
+                      you to access information instantaneoulsy (no tedeous
+                      form, long calls, or administrative hassle) and securely"
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feedback-item d-grid">
+                  <div class="item-left d-flex align-items-center">
+                    <div class="item-img">
+                      <img
+                        src=""
+                        alt=""
+                      />
+                    </div>
+                    <div class="item-info text-white">
+                      <p class="fw-7 name">John Doe</p>
+                      <span class="designation fw-4">Founder Circle</span>
+                    </div>
+                  </div>
+                  <div class="item-right">
+                    <p class="text text-white">
+                      "Our dedicated patient engagement app and web portal allow
+                      you to access information instantaneoulsy (no tedeous
+                      form, long calls, or administrative hassle) and securely"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <h2 id="Contactus" style="text-align: center; color: white">
+          Contact Us
+        </h2>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-list d-grid text-white">
+              <div class="footer-item">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                  <span class="brand-shape d-inline-block text-white">D</span>
+                  <span class="brand-text fw-7">D&M Care</span>
+                </a>
+                <p class="text-white">
+                  D&M Care provides progressive, and affordable healthcare,
+                  accessible on mobile and online for everyone
+                </p>
+                <p class="text-white copyright-text">
+                  &copy; D&M Care PVT LTD 2023. All rights reserved.
+                </p>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Company</h3>
+                <ul class="footer-links">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Find a doctor</a></li>
+                  <li><a href="#">Apps</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Region</h3>
+                <ul class="footer-links">
+                  <li><a href="#">India</a></li>
+                  <li><a href="#">Singapore</a></li>
+                  <li><a href="#">Russia</a></li>
+                  <li><a href="#">Canada</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Help</h3>
+                <ul class="footer-links">
+                  <li><a href="#">Help center</a></li>
+                  <li><a href="#">Contact support</a></li>
+                  <li><a href="#">Instructions</a></li>
+                  <li><a href="#">How it works</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-element-1">
+          <img
+            src="https://github.com/Raushan2704/PHN_Internship_Task6/blob/main/Assets/images/element-img-4.png?raw=true"
+            alt=""
+          />
+        </div>
+        <div class="footer-element-2">
+          <img
+            src="https://github.com/Raushan2704/PHN_Internship_Task6/blob/main/Assets/images/element-img-5.png?raw=true"
+            alt=""
+          />
+        </div>
+      </footer>
+    </div>
+
+    <!-- jquery cdn -->
+    <script>
+      
+
+$(document).ready(function(){
+    $('.feedback-slider').owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: true,
+        items: 1,
+        autoplay: true,
+        navText: ["<i class = 'fas fa-arrow-left'></i>", "<i class = 'fas fa-arrow-right'></i>"]
+     });
+
+    // stop animation on resize
+    let resizeTimer;
+    $(window).resize(function(){
+        $(document.body).addClass('resize-animation-stopper');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            $(document.body).removeClass('resize-animation-stopper');
+        }, 400);
+    });
+
+    $('.navbar-show-btn').click(function(){
+        $('.navbar-box').addClass('navbar-box-show');
+    });
+
+    $('.navbar-hide-btn').click(function(){
+        $('.navbar-box').removeClass("navbar-box-show");
+    })
+});
+    </script>
+    <!-- custom js -->
+    
+  </body>
+</html>
